@@ -41,6 +41,7 @@ function searchWords () {
 }
 
 function findWord(puzzle, word) {
+    let wordCoord;
     const firstLetter = word.charAt(0);
     for (let i = 0; i < puzzleHeight; i++) {
         // Find all first letter matches in a row.
@@ -54,11 +55,12 @@ function findWord(puzzle, word) {
             const possibleArrays = getArrays(word.length, puzzle, i, first);
             possibleArrays.forEach(array => {
                 if (checkMatch(array, word)) {
-                    return `${ word } (${ first }, ${ i })`;
+                    wordCoord = `${ word } (${ first }, ${ i })`;
                 }
             })
         });
-    }    
+    }
+    return wordCoord;    
 }
 
 function checkMatch (array, word) {
@@ -116,3 +118,4 @@ function getArrays (length, puzzle, row, column) {
 }
 
 parseInput();
+searchWords();
