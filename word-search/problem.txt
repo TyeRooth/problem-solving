@@ -1,0 +1,23 @@
+Create a program that reads input_file.txt and solves the Word Search.
+
+Input:
+------
+
+The input file begins with the puzzle, which is a 10x10 set of characters,
+followed by a blank line, and then a list of words contained in the
+puzzle, one word per line.
+
+Each row of the puzzle is on a separate line of the file, and the characters
+are separated by spaces.
+
+
+Output:
+-------
+
+The program should output the list of words, followed by the co-ordinates of
+the first letter of the word.
+
+eg, 
+paucity (6, 4)
+guaranty (8, 0)
+...
